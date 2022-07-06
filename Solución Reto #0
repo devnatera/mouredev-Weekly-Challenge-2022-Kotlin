@@ -21,7 +21,27 @@ fun main() {
     
     /*
      * Usando condicionales anidados
-     * 
+     * 2022_07_06
+     */
+    println("======== Solución # 1")
+    solucion1()
+    
+    /*
+     * Usando when
+     * 2022_07_06
+     */
+    println("======== Solución # 2")
+    solucion2()
+    
+    /*
+     * Usando When y Lamdas como funciones de validación
+     * 2022_07_06
+     */
+    println("======== Solución # 3")
+    solucion3()
+}
+
+fun solucion1 () {
     for (i in 1..100) {
         val multiploDe3: Boolean = (i % 3 == 0)
         val multiploDe5: Boolean = (i % 5 == 0)
@@ -36,12 +56,9 @@ fun main() {
             println(i)
         }
     }
-     *
-     */
-    
-    /*
-     * Usando when
-     */
+}
+
+fun solucion2 () {
     for (i in 1..100) {
         when {
             (i % 3 == 0) && (i % 5 == 0) -> println("fizzbuzz")
@@ -50,11 +67,10 @@ fun main() {
             else -> println(i)
         }
     }
-    
-    
-    /*
-     * Usando When y Lamdas como funciones de validacion
-     * 
+}
+
+fun solucion3 () {
+
     val multiploDe3 = fun (x: Int) :Boolean = (x % 3 == 0)
     val multiploDe5 = fun (x: Int) :Boolean = (x % 5 == 0)
     
@@ -70,6 +86,4 @@ fun main() {
             else -> println(i)
         }
     }
-     *
-     */
 }
